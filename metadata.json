@@ -1,0 +1,7 @@
+{
+  "name": "BD Experto",
+  "description": "Real-time AI assistant for medical billing business development. Listens to calls, analyzes documents, and provides expert rebuttals and pitch points.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

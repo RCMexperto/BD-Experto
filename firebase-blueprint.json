@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "Message": {
+      "title": "Message",
+      "description": "A chat message in the conversation history.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the message." },
+        "role": { "type": "string", "description": "Role of the sender (doctor or assistant)." },
+        "text": { "type": "string", "description": "Content of the message." },
+        "timestamp": { "type": "string", "format": "date-time", "description": "When the message was sent." },
+        "uid": { "type": "string", "description": "The UID of the user who owns this message." }
+      },
+      "required": ["id", "role", "text", "timestamp", "uid"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}/messages/{messageId}": {
+      "schema": { "$ref": "Message" },
+      "description": "Messages stored per user."
+    }
+  }
+}
